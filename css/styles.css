@@ -1,0 +1,169 @@
+/* css/styles.css - estilo simple y legible */
+
+/* Variables de color y diseño base */
+:root {
+  --bg: #0b1020;           /* Fondo general oscuro */
+  --card: #121a2e;         /* Fondo de tarjetas */
+  --text: #e5e7eb;         /* Texto principal */
+  --muted: #9ca3af;        /* Texto secundario o apagado */
+  --accent: #60a5fa;       /* Color de acento (hover, detalles) */
+  --border: #1f2a44;       /* Color de bordes */
+}
+
+/* Ajuste de caja para todos los elementos */
+* {
+  box-sizing: border-box;
+}
+
+/* Estilos base para html y body */
+html, body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(180deg, var(--bg), #0e1428); /* Fondo degradado */
+  color: var(--text);
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, 'Helvetica Neue', Arial, sans-serif;
+  line-height: 1.55;
+}
+
+/* Contenedor principal centrado */
+.container {
+  max-width: 1000px;
+  margin: 24px auto;
+  padding: 0 16px;
+}
+
+/* Encabezado del sitio */
+.site-header {
+  padding: 28px 16px;
+  border-bottom: 1px solid var(--border);
+  background: rgba(255,255,255,0.02); /* Fondo semitransparente */
+  backdrop-filter: blur(2px);         /* Efecto de desenfoque */
+}
+
+/* Título principal */
+.site-header h1 {
+  margin: 0 0 6px 0;
+  font-size: clamp(20px, 3vw, 30px); /* Tamaño adaptable */
+}
+
+/* Subtítulo del encabezado */
+.subtitle {
+  margin: 0;
+  color: var(--muted);
+}
+
+/* Navegación principal */
+.main-nav {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--border);
+  background: rgba(255,255,255,0.02);
+}
+
+/* Enlaces de navegación */
+.main-nav a {
+  color: var(--text);
+  text-decoration: none;
+  padding: 8px 12px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+}
+
+/* Efecto hover en enlaces */
+.main-nav a:hover {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 2px rgba(96,165,250,.2) inset;
+}
+
+/* Tarjetas de contenido */
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 18px;
+  margin: 16px 0;
+  box-shadow: 0 8px 24px rgba(0,0,0,.25);
+}
+
+/* Encabezados secundarios */
+h2 {
+  margin: 8px 0 12px 0;
+}
+
+/* Estilos para código y bloques preformateados */
+code, pre {
+  background: #0b1224;
+  color: #eaeefb;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 2px 6px;
+}
+
+pre {
+  padding: 12px;
+  overflow: auto;
+}
+
+/* Tablas */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 10px 0;
+}
+
+.table th, .table td {
+  border: 1px solid var(--border);
+  padding: 8px;
+  text-align: left;
+}
+
+/* Etiquetas tipo insignia */
+.badge {
+  display: inline-block;
+  padding: 2px 8px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  color: var(--accent);
+  font-size: 12px;
+}
+
+/* Pie de página */
+.site-footer {
+  padding: 22px 16px;
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  text-align: center;
+  margin-top: 30px;
+}
+
+/* Utilidad de diseño flexible */
+.flex {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+/* Texto pequeño y apagado */
+.small {
+  font-size: 14px;
+  color: var(--muted);
+}
+
+/* Listas con sangría */
+.list {
+  margin: 0;
+  padding-left: 18px;
+}
+
+.list li {
+  margin: 4px 0;
+}
+
+/* Línea divisoria */
+hr {
+  border: 0;
+  border-top: 1px solid var(--border);
+  margin: 18px 0;
+}
